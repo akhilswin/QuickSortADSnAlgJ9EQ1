@@ -1,23 +1,23 @@
 package yaksha;
 
 public class Array {
-	private int a[];
+	private int array[];
 	private int beg;
 	private int end;
 
-	public Array(int[] a, int beg, int end) {
+	public Array(int[] array, int beg, int end) {
 		super();
-		this.a = a;
+		this.array = array;
 		this.beg = beg;
 		this.end = end;
 	}
 
-	public int[] getA() {
-		return a;
+	public int[] getArray() {
+		return array;
 	}
 
-	public void setA(int[] a) {
-		this.a = a;
+	public void setArray(int[] array) {
+		this.array = array;
 	}
 
 	public int getBeg() {
