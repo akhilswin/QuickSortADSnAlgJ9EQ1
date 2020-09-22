@@ -3,7 +3,6 @@ package yaksha;
 public class QuickSort {
 
 	public static int partition(int a[], int beg, int end) {
-
 		int left, right, temp, loc, flag;
 		loc = left = beg;
 		right = end;
@@ -35,15 +34,18 @@ public class QuickSort {
 		return loc;
 	}
 
-	static int [] quickSort(int a[], int beg, int end) {
-
+	static int[] quickSort(Array array1) {
+		int array[] = array1.getArray();
+		int beg = array1.getBeg();
+		int end = array1.getEnd();
 		int loc;
 		if (beg < end) {
-			loc = partition(a, beg, end);
-			quickSort(a, beg, loc - 1);
-			quickSort(a, loc + 1, end);
-			
+			loc = partition(array, beg, end);
+			Array array2 = new Array(array, beg, loc - 1);
+			quickSort(array2);
+			Array array3 = new Array(array, loc + 1, end);
+			quickSort(array3);
 		}
-		return a;
+		return array;
 	}
 }
